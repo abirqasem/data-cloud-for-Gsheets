@@ -1,22 +1,33 @@
 # data-cloud-for-Gsheets
-A very simple add-on for google sheets that generate tag cloud from data
+A **bare-bones** add-on for google sheets that generates tag clouds from spreadsheet data
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-
-### the tl:dr if you know what you are doing 
-The code here is a skeleton google sheets add-on that creates pretty data cloud from a spreasheet range. Fork/clone the repository and add them to a Google Apps Script project. 
+![alt text](http://abirqasem.github.io/pics_for_apps/AQ%20time%20sheet%20-%20Google%20Sheets.clipular.png)
 
 
-### more details      
+### Installation
 
-1. Create a Google Apps Script project. If you do not know how http://blogs.worldbank.org/publicsphere/bill-gates-did-it-william-did-it-mayor-bloomberg-did-it-and-even-potus-did-it-shouldnt-you-hour-code
-2. Fork/clone this repository and add the files to your script project (make sure the file names are same)
-3. From the script editor test is add on
-add stuff to the ss - and see the data
+1. Create a Google Apps Script project. If you do not know how to here's a [nice intro.](http://blogs.worldbank.org/publicsphere/bill-gates-did-it-william-did-it-mayor-bloomberg-did-it-and-even-potus-did-it-shouldnt-you-hour-code)
+3. Fork/clone this repository and add all the files to Google Apps Script project (make sure the file names remain the same, *they matter*)
+4. From the script editor of your Google Apps Script go to Publish --> Test as add-on.. menu
+5. Create a test configuration. [Here's how] (https://developers.google.com/apps-script/add-ons/test)
+6. Once the test configuration is set up run the Test.
+7. It will launch the test spreadsheet (that you have selected during the test configuration)
+8. You will be able find this add-on under the Add-ons menu of the spread
+
+### Useage
+1. Select a range
+2. The range should be two columns
+3. The first column should contain the tags/words whose cloud you wish to make
+4. The second column must be numeric, it should have values that capture the relative magnitude of the tags, e.g. frequencies, size etc.
 
 
-Feel free to change as yoy see fit a poiter back would be nice
+### Credits and notes
+- Code borrowed from the work of [Learn in 60 seconds](http:Learnin60seconds.com)
+- Word cloud jQuery library credit goes to [mistic100](https://github.com/mistic100/jQCloud) 
 
-more add-ons
+
+### License
+This code is available under the MIT license. 
+
+
 
