@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('Stylesheet').getContent(); ?>
+    <?!= HtmlService.createHtmlOutputFromFile('libs').getContent(); ?>
+   
+  
+  </head>
+    
+<body>
+
+
+<div class="sidebar container card" id="gallery_holder">
+    <div class="input-group">
+    <h5>Select a range and hit the cloud button </h5>
+    <button type='button' id='gen_cloud' class='btn btn-primary btn-sm btn-space' >Cloud</button> 
+    <button type='button' id='clear' class='btn btn-secondary btn-sm btn-space' >Clear</button> 
+    
+      </div>
+      <div class="row">
+        <div id="cloud"></div>
+     </div>
+     <div class="row error"><div id='error'></div></div>
+  </div>
+
+
+  
+
+
+<script>
+
+  gen_cloud.onclick = function (event) {
+      $('#cloud').jQCloud('destroy');
+      error.innerHTML=''
+      google.script.run.withFailureHandler (function (e) {error.innerHTML = e}).withSuccessHandler (function(items){
+        $("#cloud").jQCloud(items, {width: 280, height: 350, colors: ['purple','fuchsia','green','lime','olive','black']});
+      }).gen_fd_from_ss() 
+    }
+
+
+  clear.onclick = function (event) {
+      $('#cloud').jQCloud('destroy');
+      error.innerHTML=''
+    
+
+  }
+    </script>
+    </body>
+</html>
+
+
