@@ -5,7 +5,7 @@
 
 function onOpen(e) {
 
-  SpreadsheetApp.getUi().createAddonMenu().addItem('try_me', 'make_tc').addToUi()
+  SpreadsheetApp.getUi().createAddonMenu().addItem('Start', 'make_tc').addToUi()
   
 }
 
@@ -18,7 +18,7 @@ function onInstall(e) {
 
 function make_tc() {
    try {
-      SpreadsheetApp.getUi().showSidebar(HtmlService.createTemplateFromFile("UI").evaluate().setTitle("Data Clould").setWidth(300).setSandboxMode(HtmlService.SandboxMode.IFRAME));
+      SpreadsheetApp.getUi().showSidebar(HtmlService.createTemplateFromFile("UI").evaluate().setTitle("Data Cloud for Gsheets").setWidth(300).setSandboxMode(HtmlService.SandboxMode.IFRAME));
    }
    catch(e)
    {
